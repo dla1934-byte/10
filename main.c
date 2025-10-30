@@ -3,19 +3,16 @@
 #define SIZE 5
 int main(int argc, char *argv[])
 {
-  int i,average;
-  int sum;
-  int grade[SIZE];
+  int i;
+  int a[SIZE]={1,2,3,4,5}; 
+  int b[SIZE]={1,2,3,4,5};
   
-  sum=0;
-  for(i=0; i<SIZE; i++)
-  {
-          printf("학생 성적을 입력하세요:"); 
-          scanf("%d", &grade[i]);
-          sum+=grade[i];
-   } 
-  average=sum/SIZE;
-  printf("성적 평균 : %d\n", average);
+  if(a==b)
+    printf("배열은 같은 값을 가집니다.\n");
+  
+  else
+    printf("배열은 다른 값을 가집니다.\n"); 
+
   
   system("PAUSE");	
   return 0;
