@@ -4,16 +4,22 @@
 int main(int argc, char *argv[])
 {
   int i;
-  int a[SIZE]={1,2,3,4,5}; 
-  int b[SIZE]={1,2,3,4,5};
+  int grade[SIZE];
+  int score[SIZE];
   
-  if(a==b)
-    printf("배열은 같은 값을 가집니다.\n");
+  for(i=0;i<SIZE;i++)
+  {
+                     grade[i]=rand()%100;
+                     score[i]=grade[i];
+  }
+  #if 1
+  for(i=0;i<SIZE; i++)
+     printf("grade[%i]=%i, score[%i]=%i\n", i, grade[i], i, score[i]);
+  #endif
   
-  else
-    printf("배열은 다른 값을 가집니다.\n"); 
 
-  
+
+
   system("PAUSE");	
   return 0;
 }
