@@ -8,19 +8,25 @@ int main(int argc, char *argv[])
   FILE* fp;
   char c;
   
+  
   fp=fopen("sample.txt", "r");
-  
-  
+  if(fp==NULL)
+  {
+              printf("Failed to open file!\n");
+              return -1;
+  }
+  #if 0
   while((c= fgetc(fp))!=EOF)
   {
             putchar(c);
   }
-  #if 0
+  #else
+  
   while(fgets(input,100,fp)>0) 
   {
         printf("%s", input);
   }    
-  #endif          
+  #endif         
   
   fclose(fp);
   
